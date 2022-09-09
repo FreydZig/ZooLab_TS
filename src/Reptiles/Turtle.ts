@@ -1,14 +1,14 @@
-import {Bird} from "../AnimalsTypes/Bird"
+import {Reptile} from "../AnimalsTypes/Reptile";
 import {Animal} from "../Animal";
 
-export class Parrot extends Bird{
+export class Turtle extends Reptile{
 
     constructor(requiredSpaceSqFt, favouriteFood, feedTimes, feedSchedule, isSick, id) {
         super(requiredSpaceSqFt, favouriteFood, feedTimes, feedSchedule, isSick, id);
     }
 
     IsFriendlyWith(animal: Animal) {
-        //TODO: Add logic Parrot Is Friendly With
+        //TODO: Add Turtle Bison Is Friendly With
     }
 
 }
