@@ -15,16 +15,22 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-exports.Parrot = void 0;
-var Bird_1 = require("../AnimalsTypes/Bird");
-var Parrot = /** @class */ (function (_super) {
-    __extends(Parrot, _super);
-    function Parrot(requiredSpaceSqFt, favouriteFood, feedTimes, feedSchedule, isSick, id) {
-        return _super.call(this, requiredSpaceSqFt, favouriteFood, feedTimes, feedSchedule, isSick, id) || this;
+exports.Bison = void 0;
+var Mammal_1 = require("../../AnimalsTypes/Mammal");
+var Elephant_1 = require("./Elephant");
+var Bison = /** @class */ (function (_super) {
+    __extends(Bison, _super);
+    function Bison(requiredSpaceSqFt, favouriteFood, feedTimes, feedSchedule, isSick, id) {
+        var _this = this;
+        if ((requiredSpaceSqFt >= 1000) && (favouriteFood == 'Grass'))
+            _this = _super.call(this, requiredSpaceSqFt, favouriteFood, feedTimes, feedSchedule, isSick, id) || this;
+        else
+            throw new Error('requiredSpaceSqFt < 1000 or/and favouriteFood is not Grass');
+        return _this;
     }
-    Parrot.prototype.IsFriendlyWith = function (animal) {
-        //TODO: Add logic Is Friendly
+    Bison.prototype.IsFriendlyWith = function (animal) {
+        return (animal instanceof Elephant_1.Elephant);
     };
-    return Parrot;
-}(Bird_1.Bird));
-exports.Parrot = Parrot;
+    return Bison;
+}(Mammal_1.Mammal));
+exports.Bison = Bison;

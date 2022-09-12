@@ -15,15 +15,21 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-exports.Turtle = void 0;
-var Reptile_1 = require("../AnimalsTypes/Reptile");
-var Turtle = /** @class */ (function (_super) {
-    __extends(Turtle, _super);
-    function Turtle(requiredSpaceSqFt, favouriteFood, feedTimes, feedSchedule, isSick, id) {
-        return _super.call(this, requiredSpaceSqFt, favouriteFood, feedTimes, feedSchedule, isSick, id) || this;
+exports.Snake = void 0;
+var Reptile_1 = require("../../AnimalsTypes/Reptile");
+var Snake = /** @class */ (function (_super) {
+    __extends(Snake, _super);
+    function Snake(requiredSpaceSqFt, favouriteFood, feedTimes, feedSchedule, isSick, id) {
+        var _this = this;
+        if ((requiredSpaceSqFt >= 2) && (favouriteFood == 'Meet'))
+            _this = _super.call(this, requiredSpaceSqFt, favouriteFood, feedTimes, feedSchedule, isSick, id) || this;
+        else
+            throw new Error('requiredSpaceSqFt < 2 or/and favouriteFood is not Meet');
+        return _this;
     }
-    Turtle.prototype.IsFriendlyWith = function (animal) {
+    Snake.prototype.IsFriendlyWith = function (animal) {
+        return (animal instanceof Snake);
     };
-    return Turtle;
+    return Snake;
 }(Reptile_1.Reptile));
-exports.Turtle = Turtle;
+exports.Snake = Snake;

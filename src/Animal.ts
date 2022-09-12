@@ -7,16 +7,16 @@ export abstract class Animal {
     IsSick: boolean;
     Id: number;
 
-    protected constructor(requiredSpaceSqFt, favouriteFood, feedTimes, feedSchedule, isSick, id) {
+    protected constructor(requiredSpaceSqFt : number, favouriteFood : string, feedTimes: Array<FeedTime>, feedSchedule : Array<number>, isSick: boolean, id: number) {
         this.RequiredSpaceSqFt = requiredSpaceSqFt;
         this.FavouriteFood  = favouriteFood;
-        this.FeedTimes = favouriteFood;
+        this.FeedTimes = feedTimes;
         this.FeedSchedule = feedSchedule;
         this.IsSick = isSick;
         this.Id = id;
     }
 
-    abstract IsFriendlyWith(animal: Animal);
+    abstract IsFriendlyWith(animal: Animal) : boolean;
 
     //TODO: Add class Food
     Feed(/*Food*/){

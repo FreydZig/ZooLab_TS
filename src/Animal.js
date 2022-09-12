@@ -5,7 +5,7 @@ var Animal = /** @class */ (function () {
     function Animal(requiredSpaceSqFt, favouriteFood, feedTimes, feedSchedule, isSick, id) {
         this.RequiredSpaceSqFt = requiredSpaceSqFt;
         this.FavouriteFood = favouriteFood;
-        this.FeedTimes = favouriteFood;
+        this.FeedTimes = feedTimes;
         this.FeedSchedule = feedSchedule;
         this.IsSick = isSick;
         this.Id = id;

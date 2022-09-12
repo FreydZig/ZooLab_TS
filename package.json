@@ -2,18 +2,24 @@
   "name": "zoolab_ts",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
-    "test": "nyc ./node_modules/.bin/_mocha 'test/**/*.test.ts'"
+    "testdddd": "nyc ./node_modules/.bin/_mocha '__test__/**/*.test.ts'",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@testdeck/mocha": "^0.2.1",
     "@types/chai": "^4.3.3",
+    "@types/jest": "^29.0.1",
+    "@types/node": "^18.7.16",
     "chai": "^4.3.6",
+    "jest": "^29.0.3",
     "mocha": "^10.0.0",
     "nyc": "^15.1.0",
-    "ts-node": "^10.9.1"
+    "ts-jest": "^29.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.3"
   }
 }
