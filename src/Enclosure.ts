@@ -1,12 +1,20 @@
 import {Animal} from "./Animal";
+import {Zoo} from "./Zoo";
 
 export class Enclosure{
     Name: string;
     Animals: Array<Animal>;
-    ParentZoo: string;//Zoo;
+    ParentZoo: Zoo;
     SquareFeet: number;
 
+    constructor(name: string, parentZoo: Zoo, squareFeet: number) {
+        this.Name = name;
+        this.Animals = new Array<Animal>;
+        this.ParentZoo = parentZoo;
+        this.SquareFeet = squareFeet;
+    }
+
     AddAnimal(animal: Animal): void{
-        //TODO: Add logic Add Animal
+        this.Animals.push(animal);
     }
 }

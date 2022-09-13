@@ -10,11 +10,11 @@ export abstract class Animal {
     IsSick: boolean;
     Id: number;
 
-    protected constructor(requiredSpaceSqFt : number, favouriteFood : string, feedTimes: Array<FeedTime>, feedSchedule : Array<number>, isSick: boolean, id: number) {
+    protected constructor(requiredSpaceSqFt : number, favouriteFood : string, isSick: boolean, id: number) {
         this.RequiredSpaceSqFt = requiredSpaceSqFt;
         this.FavouriteFood  = favouriteFood;
-        this.FeedTimes = feedTimes;
-        this.FeedSchedule = feedSchedule;
+        this.FeedTimes = new Array<FeedTime>();
+        this.FeedSchedule = new Array<number>();
         this.IsSick = isSick;
         this.Id = id;
     }
@@ -26,7 +26,7 @@ export abstract class Animal {
     };
 
     AddFeedSchedule(hours: Array<number>){
-        //TODO: Add logic FeedSchedule logic
+        this.FeedSchedule.push(hours[0]);
     };
 
     Heel(medicine: Medicine){

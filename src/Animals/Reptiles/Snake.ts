@@ -4,9 +4,9 @@ import {FeedTime} from "../../FeedTime";
 
 export class Snake extends Reptile{
 
-    constructor(requiredSpaceSqFt : number, favouriteFood : string, feedTimes: Array<FeedTime>, feedSchedule : Array<number>, isSick: boolean, id: number) {
+    constructor(requiredSpaceSqFt : number, favouriteFood : string, isSick: boolean, id: number) {
         if((requiredSpaceSqFt >= 2) && (favouriteFood == 'Meet'))
-        super(requiredSpaceSqFt, favouriteFood, feedTimes, feedSchedule, isSick, id);
+        super(requiredSpaceSqFt, favouriteFood, isSick, id);
         else
             throw new Error('requiredSpaceSqFt < 2 or/and favouriteFood is not Meet');
     }

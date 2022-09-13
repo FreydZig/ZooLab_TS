@@ -3,11 +3,11 @@ exports.__esModule = true;
 exports.Animal = void 0;
 var FeedTime_1 = require("./FeedTime");
 var Animal = /** @class */ (function () {
-    function Animal(requiredSpaceSqFt, favouriteFood, feedTimes, feedSchedule, isSick, id) {
+    function Animal(requiredSpaceSqFt, favouriteFood, isSick, id) {
         this.RequiredSpaceSqFt = requiredSpaceSqFt;
         this.FavouriteFood = favouriteFood;
-        this.FeedTimes = feedTimes;
-        this.FeedSchedule = feedSchedule;
+        this.FeedTimes = new Array();
+        this.FeedSchedule = new Array();
         this.IsSick = isSick;
         this.Id = id;
     }
@@ -16,7 +16,7 @@ var Animal = /** @class */ (function () {
     };
     ;
     Animal.prototype.AddFeedSchedule = function (hours) {
-        //TODO: Add logic FeedSchedule logic
+        this.FeedSchedule.push(hours[0]);
     };
     ;
     Animal.prototype.Heel = function (medicine) {

@@ -19,10 +19,10 @@ exports.Penguin = void 0;
 var Bird_1 = require("../../AnimalsTypes/Bird");
 var Penguin = /** @class */ (function (_super) {
     __extends(Penguin, _super);
-    function Penguin(requiredSpaceSqFt, favouriteFood, feedTimes, feedSchedule, isSick, id) {
+    function Penguin(requiredSpaceSqFt, favouriteFood, isSick, id) {
         var _this = this;
         if ((requiredSpaceSqFt >= 10) && (favouriteFood == 'Vegetable'))
-            _this = _super.call(this, requiredSpaceSqFt, favouriteFood, feedTimes, feedSchedule, isSick, id) || this;
+            _this = _super.call(this, requiredSpaceSqFt, favouriteFood, isSick, id) || this;
         else
             throw new Error('requiredSpaceSqFt < 9 or/and favouriteFood is not Vegetable');
         return _this;

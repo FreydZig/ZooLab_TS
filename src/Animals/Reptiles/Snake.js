@@ -19,10 +19,10 @@ exports.Snake = void 0;
 var Reptile_1 = require("../../AnimalsTypes/Reptile");
 var Snake = /** @class */ (function (_super) {
     __extends(Snake, _super);
-    function Snake(requiredSpaceSqFt, favouriteFood, feedTimes, feedSchedule, isSick, id) {
+    function Snake(requiredSpaceSqFt, favouriteFood, isSick, id) {
         var _this = this;
         if ((requiredSpaceSqFt >= 2) && (favouriteFood == 'Meet'))
-            _this = _super.call(this, requiredSpaceSqFt, favouriteFood, feedTimes, feedSchedule, isSick, id) || this;
+            _this = _super.call(this, requiredSpaceSqFt, favouriteFood, isSick, id) || this;
         else
             throw new Error('requiredSpaceSqFt < 2 or/and favouriteFood is not Meet');
         return _this;

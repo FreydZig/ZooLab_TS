@@ -9,6 +9,8 @@ import {Parrot} from "./Animals/Birds/Parrot";
 import {Bison} from "./Animals/Mammal/Bison";
 import {Elephant} from "./Animals/Mammal/Elephant";
 import {Veterinarian} from "./Employee/Veterinarian";
+import {Enclosure} from "./Enclosure";
+import {Zoo} from "./Zoo";
 //
 // export class Cat {
 //     public name: string;
@@ -36,13 +38,13 @@ import {Veterinarian} from "./Employee/Veterinarian";
 //     //else throw new Error('ff');
 // }
 //
- const parrot = new Parrot(5, 'Grass', [new FeedTime(new Date(), new ZooKeeper('Bob', 'Ceen', 'Lion'))], [10], false, 1);
+ const parrot = new Parrot(4, 'Grass', false, 1);
 // const penguin = new Penguin(10, 'Vegetable', [new FeedTime(new Date(), new ZooKeeper())], [10], false, 1);
 // const bison = new Bison(1000, 'Grass', [new FeedTime(new Date(), new ZooKeeper())], [10], false, 1);
 // const elephant = new Elephant(1000, 'Vegetable', [new FeedTime(new Date(), new ZooKeeper())], [10], false, 1);
 // const lion = new Lion(1000, 'Meet', [new FeedTime(new Date(), new ZooKeeper())], [10], false, 1);
 // const turtle = new Turtle(5, 'Grass', [new FeedTime(new Date(), new ZooKeeper())], [10], false, 1);
- const snake = new Snake(2, 'Meet', [new FeedTime(new Date(), new ZooKeeper('Bob', 'Ceen', 'Lion'))], [10], false, 1);
+ const snake = new Snake(2, 'Meet', false, 1);
 
 const animals = [Penguin, Parrot, Bison, Elephant, Lion, Snake, Turtle];
 
@@ -52,11 +54,10 @@ let b = false;
 
 const veterinarian = new Veterinarian('Bob', 'Faat', 'Snake');
 
-animals.forEach(a => {
- if(snake instanceof a)
-   if('Snake' == a.name) {
-    b = true;
-   }
-});
+const enclosure = new Enclosure('Bisons', new Zoo('ff'), 4);
+
+let ar: Snake;
+
+console.log(ar);
 
 //IsFriendlyWith(turtle);

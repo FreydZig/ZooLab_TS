@@ -7,9 +7,9 @@ import {Elephant} from "../Mammal/Elephant";
 
 export class Turtle extends Reptile{
 
-    constructor(requiredSpaceSqFt : number, favouriteFood : string, feedTimes: Array<FeedTime>, feedSchedule : Array<number>, isSick: boolean, id: number) {
+    constructor(requiredSpaceSqFt : number, favouriteFood : string, isSick: boolean, id: number) {
         if((requiredSpaceSqFt >= 5) && (favouriteFood == 'Grass'))
-        super(requiredSpaceSqFt, favouriteFood, feedTimes, feedSchedule, isSick, id);
+        super(requiredSpaceSqFt, favouriteFood, isSick, id);
         else
             throw new Error('requiredSpaceSqFt < 5 or/and favouriteFood is not Grass');
     }
