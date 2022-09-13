@@ -1,6 +1,7 @@
 "use strict";
 exports.__esModule = true;
 exports.Animal = void 0;
+var FeedTime_1 = require("./FeedTime");
 var Animal = /** @class */ (function () {
     function Animal(requiredSpaceSqFt, favouriteFood, feedTimes, feedSchedule, isSick, id) {
         this.RequiredSpaceSqFt = requiredSpaceSqFt;
@@ -10,9 +11,8 @@ var Animal = /** @class */ (function () {
         this.IsSick = isSick;
         this.Id = id;
     }
-    //TODO: Add class Food
-    Animal.prototype.Feed = function ( /*Food*/) {
-        //TODO: Add logic Feed logic
+    Animal.prototype.Feed = function (zooKeeper) {
+        this.FeedTimes.push(new FeedTime_1.FeedTime(new Date(), zooKeeper));
     };
     ;
     Animal.prototype.AddFeedSchedule = function (hours) {

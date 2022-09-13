@@ -1,4 +1,6 @@
 import {FeedTime} from "./FeedTime"
+import {Food} from "./Food";
+import {ZooKeeper} from "./Employee/ZooKeeper";
 export abstract class Animal {
     RequiredSpaceSqFt: number;
     FavouriteFood: string;
@@ -18,9 +20,8 @@ export abstract class Animal {
 
     abstract IsFriendlyWith(animal: Animal) : boolean;
 
-    //TODO: Add class Food
-    Feed(/*Food*/){
-        //TODO: Add logic Feed logic
+    Feed(zooKeeper: ZooKeeper){
+        this.FeedTimes.push(new FeedTime(new Date(), zooKeeper ));
     };
 
     AddFeedSchedule(hours: Array<number>){
