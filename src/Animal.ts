@@ -1,6 +1,7 @@
 import {FeedTime} from "./FeedTime"
 import {Food} from "./Food";
 import {ZooKeeper} from "./Employee/ZooKeeper";
+import {Medicine} from "./Medicine";
 export abstract class Animal {
     RequiredSpaceSqFt: number;
     FavouriteFood: string;
@@ -28,8 +29,7 @@ export abstract class Animal {
         //TODO: Add logic FeedSchedule logic
     };
 
-    //TODO: Add class Medicine
-    Heel(/*Medicine*/){
-      //TODO: Add logic Heel logic
+    Heel(medicine: Medicine){
+      this.IsSick = false;
     };
 }

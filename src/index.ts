@@ -8,6 +8,7 @@ import {Penguin} from "./Animals/Birds/Penguin";
 import {Parrot} from "./Animals/Birds/Parrot";
 import {Bison} from "./Animals/Mammal/Bison";
 import {Elephant} from "./Animals/Mammal/Elephant";
+import {Veterinarian} from "./Employee/Veterinarian";
 //
 // export class Cat {
 //     public name: string;
@@ -48,6 +49,8 @@ const animals = [Penguin, Parrot, Bison, Elephant, Lion, Snake, Turtle];
 //const animals = [Penguin, Parrot, Bison, Elephant, Lion, Snake, Turtle];
 
 let b = false;
+
+const veterinarian = new Veterinarian('Bob', 'Faat', 'Snake');
 
 animals.forEach(a => {
  if(snake instanceof a)

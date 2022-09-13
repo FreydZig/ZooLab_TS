@@ -1,8 +1,6 @@
 const {Snake} = require( "../../src/Animals/Reptiles/Snake");
-
 const {Bison} = require("../../src/Animals/Mammal/Bison");
 const {FeedTime} = require("../../src/FeedTime");
-
 const {ZooKeeper} = require("../../src/Employee/ZooKeeper");
 
 describe('ZooKeeper', () => {

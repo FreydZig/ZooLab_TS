@@ -7,8 +7,6 @@ import {Elephant} from "../Animals/Mammal/Elephant";
 import {Lion} from "../Animals/Mammal/Lion";
 import {Snake} from "../Animals/Reptiles/Snake";
 import {Turtle} from "../Animals/Reptiles/Turtle";
-import {Antibiotics} from "../Medicines/Antibiotics";
-import {AntiDepression} from "../Medicines/AntiDepression";
 import {Grass} from "../Food/Grass";
 import {Meet} from "../Food/Meet";
 import {Vegetable} from "../Food/Vegetable";
@@ -31,20 +29,6 @@ export class ZooKeeper implements IEmployee{
             if(animal instanceof a)
                 this.AnimalExperiences = a.name;
         });
-        // if(animal instanceof Parrot)
-        //     this.AnimalExperiences = Parrot.name;
-        // if(animal instanceof Penguin)
-        //     this.AnimalExperiences = Penguin.name;
-        // if(animal instanceof Bison)
-        //     this.AnimalExperiences = Bison.name;
-        // if(animal instanceof Elephant)
-        //     this.AnimalExperiences = Elephant.name;
-        // if(animal instanceof Lion)
-        //     this.AnimalExperiences = Lion.name;
-        // if(animal instanceof Snake)
-        //     this.AnimalExperiences = Snake.name;
-        // if(animal instanceof Turtle)
-        //     this.AnimalExperiences = Turtle.name;
     }
 
     HasAnimalExperience(animal : Animal): boolean{
@@ -56,18 +40,6 @@ export class ZooKeeper implements IEmployee{
                 if(this.AnimalExperiences == a.name)
                     answer = true;
         });
-        // if(animal instanceof Parrot)
-        //     return this.AnimalExperiences == Parrot.name;
-        // if(animal instanceof Penguin)
-        //     return this.AnimalExperiences == Penguin.name;
-        // if(animal instanceof Bison)
-        //     return this.AnimalExperiences == Bison.name;
-        // if(animal instanceof Elephant)
-        //     return this.AnimalExperiences == Elephant.name;
-        // if(animal instanceof Lion)
-        //     return this.AnimalExperiences == Lion.name;
-        // if(animal instanceof Snake)
-        //     return this.AnimalExperiences == Snake.name;
         return answer;
     }
 

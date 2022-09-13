@@ -1,23 +1,21 @@
 "use strict";
 exports.__esModule = true;
-exports.ZooKeeper = void 0;
-var Parrot_1 = require("../Animals/Birds/Parrot");
+exports.Veterinarian = void 0;
 var Penguin_1 = require("../Animals/Birds/Penguin");
+var Parrot_1 = require("../Animals/Birds/Parrot");
 var Bison_1 = require("../Animals/Mammal/Bison");
 var Elephant_1 = require("../Animals/Mammal/Elephant");
 var Lion_1 = require("../Animals/Mammal/Lion");
 var Snake_1 = require("../Animals/Reptiles/Snake");
 var Turtle_1 = require("../Animals/Reptiles/Turtle");
-var Grass_1 = require("../Food/Grass");
-var Meet_1 = require("../Food/Meet");
-var Vegetable_1 = require("../Food/Vegetable");
-var ZooKeeper = /** @class */ (function () {
-    function ZooKeeper(firstName, lastName, animalExperiences) {
+var Antibiotics_1 = require("../Medicines/Antibiotics");
+var Veterinarian = /** @class */ (function () {
+    function Veterinarian(firstName, lastName, animalExperiences) {
         this.FirstName = firstName;
         this.LastName = lastName;
         this.AnimalExperiences = animalExperiences;
     }
-    ZooKeeper.prototype.AddAnimalExperiences = function (animal) {
+    Veterinarian.prototype.AddAnimalExperiences = function (animal) {
         var _this = this;
         var animals = [Penguin_1.Penguin, Parrot_1.Parrot, Bison_1.Bison, Elephant_1.Elephant, Lion_1.Lion, Snake_1.Snake, Turtle_1.Turtle];
         animals.forEach(function (a) {
@@ -25,7 +23,7 @@ var ZooKeeper = /** @class */ (function () {
                 _this.AnimalExperiences = a.name;
         });
     };
-    ZooKeeper.prototype.HasAnimalExperience = function (animal) {
+    Veterinarian.prototype.HasAnimalExperience = function (animal) {
         var _this = this;
         var animals = [Penguin_1.Penguin, Parrot_1.Parrot, Bison_1.Bison, Elephant_1.Elephant, Lion_1.Lion, Snake_1.Snake, Turtle_1.Turtle];
         var answer = false;
@@ -36,19 +34,14 @@ var ZooKeeper = /** @class */ (function () {
         });
         return answer;
     };
-    ZooKeeper.prototype.FeedAnimal = function (animal) {
-        var _this = this;
-        var foods = [Grass_1.Grass, Meet_1.Meet, Vegetable_1.Vegetable];
+    Veterinarian.prototype.HeelAnimal = function (animal) {
         var answer = false;
-        if (this.HasAnimalExperience(animal))
-            foods.forEach(function (f) {
-                if (animal.FavouriteFood == f.name) {
-                    animal.Feed(_this);
-                    answer = true;
-                }
-            });
+        if (this.HasAnimalExperience(animal)) {
+            animal.Heel(Antibiotics_1.Antibiotics);
+            answer = true;
+        }
         return answer;
     };
-    return ZooKeeper;
+    return Veterinarian;
 }());
-exports.ZooKeeper = ZooKeeper;
+exports.Veterinarian = Veterinarian;

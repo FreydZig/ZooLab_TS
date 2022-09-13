@@ -19,9 +19,8 @@ var Animal = /** @class */ (function () {
         //TODO: Add logic FeedSchedule logic
     };
     ;
-    //TODO: Add class Medicine
-    Animal.prototype.Heel = function ( /*Medicine*/) {
-        //TODO: Add logic Heel logic
+    Animal.prototype.Heel = function (medicine) {
+        this.IsSick = false;
     };
     ;
     return Animal;
