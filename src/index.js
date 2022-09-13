@@ -10,6 +10,7 @@ var Elephant_1 = require("./Animals/Mammal/Elephant");
 var Veterinarian_1 = require("./Employee/Veterinarian");
 var Enclosure_1 = require("./Enclosure");
 var Zoo_1 = require("./Zoo");
+var ZooApp_1 = require("./ZooApp");
 //
 // export class Cat {
 //     public name: string;
@@ -50,5 +51,6 @@ var b = false;
 var veterinarian = new Veterinarian_1.Veterinarian('Bob', 'Faat', 'Snake');
 var enclosure = new Enclosure_1.Enclosure('Bisons', new Zoo_1.Zoo('ff'), 4);
 var ar;
+var zooApp = new ZooApp_1.ZooApp();
 console.log(ar);
 //IsFriendlyWith(turtle);

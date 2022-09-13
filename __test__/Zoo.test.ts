@@ -144,4 +144,5 @@ describe('Zoo', () => {
         expect(zoo.Enclosures[2].Animals[0].IsSick).toBe(false);
         expect(zoo.Enclosures[3].Animals[0].IsSick).toBe(false);
     })
+    //TODO: Add "NOT" tests
 })

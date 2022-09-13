@@ -11,6 +11,7 @@ import {Elephant} from "./Animals/Mammal/Elephant";
 import {Veterinarian} from "./Employee/Veterinarian";
 import {Enclosure} from "./Enclosure";
 import {Zoo} from "./Zoo";
+import {ZooApp} from "./ZooApp";
 //
 // export class Cat {
 //     public name: string;
@@ -57,6 +58,8 @@ const veterinarian = new Veterinarian('Bob', 'Faat', 'Snake');
 const enclosure = new Enclosure('Bisons', new Zoo('ff'), 4);
 
 let ar: Snake;
+
+const zooApp = new ZooApp();
 
 console.log(ar);
 

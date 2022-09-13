@@ -3,7 +3,11 @@ import {Zoo} from "./Zoo";
 export class ZooApp{
     _zoos: Array<Zoo>;
 
+    constructor() {
+        this._zoos = new Array<Zoo>();
+    }
+
     AddZoo(zoo: Zoo): void{
-        //TODO: Add logic Add Zoo
+        this._zoos.push(zoo);
     }
 }
