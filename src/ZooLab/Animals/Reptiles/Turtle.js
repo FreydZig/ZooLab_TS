@@ -15,20 +15,22 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-exports.Bison = void 0;
-var Mammal_1 = require("../../AnimalsTypes/Mammal");
-var Elephant_1 = require("./Elephant");
-var Bison = /** @class */ (function (_super) {
-    __extends(Bison, _super);
-    function Bison(id) {
-        var _this = _super.call(this, 1000, 'Grass', id) || this;
-        _this.RequiredSpaceSqFt = 1000;
+exports.Turtle = void 0;
+var Reptile_1 = require("../AnimalsTypes/Reptile");
+var Bison_1 = require("../Mammal/Bison");
+var Parrot_1 = require("../Birds/Parrot");
+var Elephant_1 = require("../Mammal/Elephant");
+var Turtle = /** @class */ (function (_super) {
+    __extends(Turtle, _super);
+    function Turtle(id) {
+        var _this = _super.call(this, 5, 'Grass', id) || this;
+        _this.RequiredSpaceSqFt = 5;
         _this.FavouriteFood = 'Grass';
         return _this;
     }
-    Bison.prototype.IsFriendlyWith = function (animal) {
-        return (animal instanceof Elephant_1.Elephant);
+    Turtle.prototype.IsFriendlyWith = function (animal) {
+        return ((animal instanceof Bison_1.Bison) || (animal instanceof Parrot_1.Parrot) || (animal instanceof Elephant_1.Elephant) || (animal instanceof Turtle));
     };
-    return Bison;
-}(Mammal_1.Mammal));
-exports.Bison = Bison;
+    return Turtle;
+}(Reptile_1.Reptile));
+exports.Turtle = Turtle;

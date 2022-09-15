@@ -1,11 +1,11 @@
-import {Bird} from "../../AnimalsTypes/Bird"
+import {Reptile} from "../AnimalsTypes/Reptile";
 import {Animal} from "../../Animal";
-import {Bison} from "../Mammal/Bison";
-import {Elephant} from "../Mammal/Elephant";
-import {Turtle} from "../Reptiles/Turtle";
 import {FeedTime} from "../../FeedTime";
+import {Bison} from "../Mammal/Bison";
+import {Parrot} from "../Birds/Parrot";
+import {Elephant} from "../Mammal/Elephant";
 
-export class Parrot extends Bird{
+export class Turtle extends Reptile{
 
     constructor(id: number) {
         super(5, 'Grass', id);
@@ -14,7 +14,7 @@ export class Parrot extends Bird{
     }
 
     IsFriendlyWith(animal: Animal) {
-        return ((animal instanceof Parrot)||(animal instanceof Bison) || (animal instanceof Elephant) || (animal instanceof Turtle));
+        return ((animal instanceof Bison)||(animal instanceof Parrot)||(animal instanceof Elephant)||(animal instanceof Turtle));
     }
 
 }

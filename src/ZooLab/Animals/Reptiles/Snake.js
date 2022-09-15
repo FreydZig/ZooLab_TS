@@ -15,13 +15,19 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-exports.Mammal = void 0;
-var Animal_1 = require("../Animal");
-var Mammal = /** @class */ (function (_super) {
-    __extends(Mammal, _super);
-    function Mammal(requiredSpaceSqFt, favouriteFood, id) {
-        return _super.call(this, requiredSpaceSqFt, favouriteFood, id) || this;
+exports.Snake = void 0;
+var Reptile_1 = require("../AnimalsTypes/Reptile");
+var Snake = /** @class */ (function (_super) {
+    __extends(Snake, _super);
+    function Snake(id) {
+        var _this = _super.call(this, 2, 'Meet', id) || this;
+        _this.RequiredSpaceSqFt = 2;
+        _this.FavouriteFood = 'Meet';
+        return _this;
     }
-    return Mammal;
-}(Animal_1.Animal));
-exports.Mammal = Mammal;
+    Snake.prototype.IsFriendlyWith = function (animal) {
+        return (animal instanceof Snake);
+    };
+    return Snake;
+}(Reptile_1.Reptile));
+exports.Snake = Snake;

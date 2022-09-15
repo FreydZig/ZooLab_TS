@@ -1,9 +1,9 @@
-const {Zoo} = require( "../src/Zoo");
+const {Zoo} = require( "../src/ZooLab/Zoo");
 
-const {ZooApp} = require("../src/ZooApp");
+const {ZooApp} = require("../src/ZooLab/ZooApp");
 
-describe('ZooApp', () => {
-    it('Should be able to create ZooApp', () => {
+describe('ZooConsole', () => {
+    it('Should be able to create ZooConsole', () => {
         const zooApp = new ZooApp();
 
         expect(zooApp instanceof ZooApp).toBe(true);

@@ -15,22 +15,19 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-exports.Elephant = void 0;
-var Mammal_1 = require("../../AnimalsTypes/Mammal");
-var Bison_1 = require("./Bison");
-var Parrot_1 = require("../Birds/Parrot");
-var Turtle_1 = require("../Reptiles/Turtle");
-var Elephant = /** @class */ (function (_super) {
-    __extends(Elephant, _super);
-    function Elephant(id) {
-        var _this = _super.call(this, 1000, 'Vegetable', id) || this;
-        _this.RequiredSpaceSqFt = 1000;
+exports.Penguin = void 0;
+var Bird_1 = require("../AnimalsTypes/Bird");
+var Penguin = /** @class */ (function (_super) {
+    __extends(Penguin, _super);
+    function Penguin(id) {
+        var _this = _super.call(this, 10, 'Vegetable', id) || this;
+        _this.RequiredSpaceSqFt = 10;
         _this.FavouriteFood = 'Vegetable';
         return _this;
     }
-    Elephant.prototype.IsFriendlyWith = function (animal) {
-        return ((animal instanceof Bison_1.Bison) || (animal instanceof Parrot_1.Parrot) || (animal instanceof Turtle_1.Turtle));
+    Penguin.prototype.IsFriendlyWith = function (animal) {
+        return (animal instanceof Penguin);
     };
-    return Elephant;
-}(Mammal_1.Mammal));
-exports.Elephant = Elephant;
+    return Penguin;
+}(Bird_1.Bird));
+exports.Penguin = Penguin;

@@ -1,7 +1,7 @@
-const {Snake} = require( "../../src/Animals/Reptiles/Snake");
-const {Bison} = require("../../src/Animals/Mammal/Bison");
-const {FeedTime} = require("../../src/FeedTime");
-const {Veterinarian} = require("../../src/Employee/Veterinarian");
+const {Snake} = require( "../../src/ZooLab/Animals/Reptiles/Snake");
+const {Bison} = require("../../src/ZooLab/Animals/Mammal/Bison");
+const {FeedTime} = require("../../src/ZooLab/FeedTime");
+const {Veterinarian} = require("../../src/ZooLab/Employee/Veterinarian");
 
 describe('Veterinarian', () => {
 

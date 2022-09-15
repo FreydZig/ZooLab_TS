@@ -1,4 +1,4 @@
-import {Bird} from "../../AnimalsTypes/Bird";
+import {Bird} from "../AnimalsTypes/Bird";
 import {Animal} from "../../Animal";
 import {FeedTime} from "../../FeedTime";
 

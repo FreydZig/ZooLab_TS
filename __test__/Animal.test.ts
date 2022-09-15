@@ -1,6 +1,6 @@
-const {Bison} = require("../src/Animals/Mammal/Bison");
-const {FeedTime} = require("../src/FeedTime");
-const {ZooKeeper} = require("../src/Employee/ZooKeeper");
+const {Bison} = require("../src/ZooLab/Animals/Mammal/Bison");
+const {FeedTime} = require("../src/ZooLab/FeedTime");
+const {ZooKeeper} = require("../src/ZooLab/Employee/ZooKeeper");
 
 describe('Animal', () => {
     it('Should be able to Add Feed Schedule', () => {

@@ -16,7 +16,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 exports.__esModule = true;
 exports.Reptile = void 0;
-var Animal_1 = require("../Animal");
+var Animal_1 = require("../../Animal");
 var Reptile = /** @class */ (function (_super) {
     __extends(Reptile, _super);
     function Reptile(requiredSpaceSqFt, favouriteFood, id) {

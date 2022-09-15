@@ -1,4 +1,4 @@
-import {Mammal} from "../../AnimalsTypes/Mammal";
+import {Mammal} from "../AnimalsTypes/Mammal";
 import {Animal} from "../../Animal";
 import {Bison} from "./Bison";
 import {Parrot} from "../Birds/Parrot";

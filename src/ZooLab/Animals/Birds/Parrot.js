@@ -16,7 +16,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 exports.__esModule = true;
 exports.Parrot = void 0;
-var Bird_1 = require("../../AnimalsTypes/Bird");
+var Bird_1 = require("../AnimalsTypes/Bird");
 var Bison_1 = require("../Mammal/Bison");
 var Elephant_1 = require("../Mammal/Elephant");
 var Turtle_1 = require("../Reptiles/Turtle");

@@ -1,19 +1,19 @@
-const {Elephant} = require( "../src/Animals/Mammal/Elephant");
+const {Elephant} = require( "../src/ZooLab/Animals/Mammal/Elephant");
 
-const {Veterinarian}  = require("../src/Employee/Veterinarian");
+const {Veterinarian}  = require("../src/ZooLab/Employee/Veterinarian");
 
-const {Turtle} = require( "../src/Animals/Reptiles/Turtle");
-const {Snake} = require( "../src/Animals/Reptiles/Snake");
-const {Lion} = require( "../src/Animals/Mammal/Lion");
-const {Parrot} = require( "../src/Animals/Birds/Parrot");
+const {Turtle} = require( "../src/ZooLab/Animals/Reptiles/Turtle");
+const {Snake} = require( "../src/ZooLab/Animals/Reptiles/Snake");
+const {Lion} = require( "../src/ZooLab/Animals/Mammal/Lion");
+const {Parrot} = require( "../src/ZooLab/Animals/Birds/Parrot");
 
-const {Penguin} = require( "../src/Animals/Birds/Penguin");
+const {Penguin} = require( "../src/ZooLab/Animals/Birds/Penguin");
 
-const {Bison} = require( "../src/Animals/Mammal/Bison");
-const {FeedTime} = require( "../src/FeedTime");
-const {ZooKeeper} = require( "../src/Employee/ZooKeeper");
+const {Bison} = require( "../src/ZooLab/Animals/Mammal/Bison");
+const {FeedTime} = require( "../src/ZooLab/FeedTime");
+const {ZooKeeper} = require( "../src/ZooLab/Employee/ZooKeeper");
 
-const {Zoo} = require("../src/Zoo");
+const {Zoo} = require("../src/ZooLab/Zoo");
 
 describe('Zoo', () => {
     it('Should be able to create Zoo', () => {

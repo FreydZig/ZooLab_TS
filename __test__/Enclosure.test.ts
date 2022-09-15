@@ -1,8 +1,8 @@
-const {FeedTime} = require("../src/FeedTime");
-const {ZooKeeper} = require("../src/Employee/ZooKeeper");
-const {Enclosure} = require("../src/Enclosure");
-const {Bison} = require("../src/Animals/Mammal/Bison");
-const {Zoo} = require("../src/Zoo");
+const {FeedTime} = require("../src/ZooLab/FeedTime");
+const {ZooKeeper} = require("../src/ZooLab/Employee/ZooKeeper");
+const {Enclosure} = require("../src/ZooLab/Enclosure");
+const {Bison} = require("../src/ZooLab/Animals/Mammal/Bison");
+const {Zoo} = require("../src/ZooLab/Zoo");
 
 describe('Enclosure', () => {
     it('Should be able to create Enclosure', () => {
