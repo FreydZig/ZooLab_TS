@@ -4,11 +4,10 @@ import {FeedTime} from "../../FeedTime";
 
 export class Penguin extends Bird{
 
-    constructor(requiredSpaceSqFt : number, favouriteFood : string, isSick: boolean, id: number) {
-        if((requiredSpaceSqFt >= 10) && (favouriteFood == 'Vegetable'))
-        super(requiredSpaceSqFt, favouriteFood, isSick, id);
-        else
-            throw new Error('requiredSpaceSqFt < 9 or/and favouriteFood is not Vegetable');
+    constructor(id: number) {
+        super(10, 'Vegetable', id);
+        this.RequiredSpaceSqFt = 10;
+        this.FavouriteFood = 'Vegetable';
     }
 
     IsFriendlyWith(animal: Animal) {

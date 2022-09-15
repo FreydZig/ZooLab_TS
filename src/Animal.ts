@@ -10,12 +10,12 @@ export abstract class Animal {
     IsSick: boolean;
     Id: number;
 
-    protected constructor(requiredSpaceSqFt : number, favouriteFood : string, isSick: boolean, id: number) {
+    protected constructor(requiredSpaceSqFt : number, favouriteFood : string, id: number) {
         this.RequiredSpaceSqFt = requiredSpaceSqFt;
         this.FavouriteFood  = favouriteFood;
         this.FeedTimes = new Array<FeedTime>();
         this.FeedSchedule = new Array<number>();
-        this.IsSick = isSick;
+        this.IsSick = false;
         this.Id = id;
     }
 

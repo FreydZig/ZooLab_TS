@@ -8,7 +8,7 @@ const {ZooKeeper} = require( "../../../src/Employee/ZooKeeper");
 const {FeedTime}= require( "../../../src/FeedTime");
 const {Turtle} = require("../../../src/Animals/Reptiles/Turtle");
 
-const elephant = new Elephant(1000, 'Vegetable', false, 1);
+const elephant = new Elephant(1);
 
 describe('Elephant', () => {
     it('Should be able to create Elephant', () => {
@@ -19,23 +19,23 @@ describe('Elephant', () => {
     })
 
     it('Should be able to friend with Bison, Parrots and Turtle', () => {
-        const bison = new Bison(1000, 'Grass', false, 1);
-        const parrot = new Parrot(5, 'Grass', false, 1);
-        const turtle = new Turtle(5, 'Grass', false, 1);
+        const bison = new Bison(1);
+        const parrot = new Parrot(1);
+        const turtle = new Turtle(1);
 
         expect(elephant.IsFriendlyWith(bison)).toBe(true);
         expect(elephant.IsFriendlyWith(parrot)).toBe(true);
         expect(elephant.IsFriendlyWith(turtle)).toBe(true);
     })
 
-    it('Should not be able to create Elephant', () => {
-        expect(() => new Elephant(999, 'Meet', false, 1)).toThrowError('requiredSpaceSqFt < 1000 or/and favouriteFood is not Vegetable');
-    })
+    // it('Should not be able to create Elephant', () => {
+    //     expect(() => new Elephant(999, 'Meet', false, 1)).toThrowError('requiredSpaceSqFt < 1000 or/and favouriteFood is not Vegetable');
+    // })
 
     it('Should not be able to friend with Penguin, Elephant, Lion and Snake', () => {
-        const penguin = new Penguin(10, 'Vegetable', false, 1);
-        const lion = new Lion(1000, 'Meet', false, 1);
-        const snake = new Snake(2, 'Meet', false, 1);
+        const penguin = new Penguin(1);
+        const lion = new Lion(1);
+        const snake = new Snake(1);
 
         expect(elephant.IsFriendlyWith(elephant)).toBe(false);
         expect(elephant.IsFriendlyWith(penguin)).toBe(false);

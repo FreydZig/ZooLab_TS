@@ -20,12 +20,10 @@ var Mammal_1 = require("../../AnimalsTypes/Mammal");
 var Elephant_1 = require("./Elephant");
 var Bison = /** @class */ (function (_super) {
     __extends(Bison, _super);
-    function Bison(requiredSpaceSqFt, favouriteFood, isSick, id) {
-        var _this = this;
-        if ((requiredSpaceSqFt >= 1000) && (favouriteFood == 'Grass'))
-            _this = _super.call(this, requiredSpaceSqFt, favouriteFood, isSick, id) || this;
-        else
-            throw new Error('requiredSpaceSqFt < 1000 or/and favouriteFood is not Grass');
+    function Bison(id) {
+        var _this = _super.call(this, 1000, 'Grass', id) || this;
+        _this.RequiredSpaceSqFt = 1000;
+        _this.FavouriteFood = 'Grass';
         return _this;
     }
     Bison.prototype.IsFriendlyWith = function (animal) {

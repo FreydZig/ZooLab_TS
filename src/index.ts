@@ -39,13 +39,13 @@ import {ZooApp} from "./ZooApp";
 //     //else throw new Error('ff');
 // }
 //
- const parrot = new Parrot(4, 'Grass', false, 1);
+ const parrot = new Parrot(1);
 // const penguin = new Penguin(10, 'Vegetable', [new FeedTime(new Date(), new ZooKeeper())], [10], false, 1);
 // const bison = new Bison(1000, 'Grass', [new FeedTime(new Date(), new ZooKeeper())], [10], false, 1);
 // const elephant = new Elephant(1000, 'Vegetable', [new FeedTime(new Date(), new ZooKeeper())], [10], false, 1);
 // const lion = new Lion(1000, 'Meet', [new FeedTime(new Date(), new ZooKeeper())], [10], false, 1);
 // const turtle = new Turtle(5, 'Grass', [new FeedTime(new Date(), new ZooKeeper())], [10], false, 1);
- const snake = new Snake(2, 'Meet', false, 1);
+ const snake = new Snake(1);
 
 const animals = [Penguin, Parrot, Bison, Elephant, Lion, Snake, Turtle];
 
@@ -61,6 +61,6 @@ let ar: Snake;
 
 const zooApp = new ZooApp();
 
-console.log(ar);
+//console.log(ar);
 
 //IsFriendlyWith(turtle);

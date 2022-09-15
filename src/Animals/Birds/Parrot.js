@@ -22,12 +22,10 @@ var Elephant_1 = require("../Mammal/Elephant");
 var Turtle_1 = require("../Reptiles/Turtle");
 var Parrot = /** @class */ (function (_super) {
     __extends(Parrot, _super);
-    function Parrot(requiredSpaceSqFt, favouriteFood, isSick, id) {
-        var _this = this;
-        if ((requiredSpaceSqFt >= 5) && (favouriteFood == 'Grass'))
-            _this = _super.call(this, requiredSpaceSqFt, favouriteFood, isSick, id) || this;
-        else
-            throw new Error('requiredSpaceSqFt = ' + requiredSpaceSqFt + ' or/and favouriteFood is not ' + favouriteFood);
+    function Parrot(id) {
+        var _this = _super.call(this, 5, 'Grass', id) || this;
+        _this.RequiredSpaceSqFt = 5;
+        _this.FavouriteFood = 'Grass';
         return _this;
     }
     Parrot.prototype.IsFriendlyWith = function (animal) {

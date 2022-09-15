@@ -33,9 +33,9 @@ describe('Zoo', () => {
 
     it('Should be able to Find Available Enclosure', () => {
         const zoo = new Zoo('here');
-        const bison = new Bison(1000, 'Grass', false, 1);
-        const penguin = new Penguin(10, 'Vegetable', false, 1);
-        const elephant = new Elephant(1000, 'Vegetable', false, 2)
+        const bison = new Bison(1);
+        const penguin = new Penguin(1);
+        const elephant = new Elephant(2)
 
         zoo.AddEnclosure('One1', 0);
         zoo.AddEnclosure('One2', 120);
@@ -70,10 +70,10 @@ describe('Zoo', () => {
         const zooKeeperLion = new ZooKeeper('Name','Last Name','Lion')
         const zooKeeperParrot = new ZooKeeper('Name','Last Name','Parrot')
 
-        const bison = new Bison(1000, 'Grass', false, 1);
-        const snake = new Snake(2, 'Meet', false, 1);
-        const lion = new Lion(1000, 'Meet', false, 1);
-        const parrot = new Parrot(5, 'Grass', false, 1);
+        const bison = new Bison(1);
+        const snake = new Snake(1);
+        const lion = new Lion(1);
+        const parrot = new Parrot(1);
         //const turtle = new Turtle(5, 'Grass', false, 1);
 
         zoo.AddEnclosure('One1', 1000);
@@ -111,10 +111,15 @@ describe('Zoo', () => {
         const zooKeeperLion = new Veterinarian('Name','Last Name','Lion')
         const zooKeeperParrot = new Veterinarian('Name','Last Name','Parrot')
 
-        const bison = new Bison(1000, 'Grass', true, 1);
-        const snake = new Snake(2, 'Meet', true, 1);
-        const lion = new Lion(1000, 'Meet', true, 1);
-        const parrot = new Parrot(5, 'Grass', true, 1);
+        const bison = new Bison(1);
+        const snake = new Snake(1);
+        const lion = new Lion(1);
+        const parrot = new Parrot(1);
+
+        bison.IsSick = true;
+        snake.IsSick = true;
+        lion.IsSick = true;
+        parrot.IsSick = true;
 
         zoo.AddEnclosure('One1', 1000);
         zoo.AddEnclosure('One2', 2);

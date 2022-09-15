@@ -19,8 +19,8 @@ exports.Reptile = void 0;
 var Animal_1 = require("../Animal");
 var Reptile = /** @class */ (function (_super) {
     __extends(Reptile, _super);
-    function Reptile(requiredSpaceSqFt, favouriteFood, isSick, id) {
-        return _super.call(this, requiredSpaceSqFt, favouriteFood, isSick, id) || this;
+    function Reptile(requiredSpaceSqFt, favouriteFood, id) {
+        return _super.call(this, requiredSpaceSqFt, favouriteFood, id) || this;
     }
     return Reptile;
 }(Animal_1.Animal));

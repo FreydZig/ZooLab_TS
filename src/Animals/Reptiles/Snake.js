@@ -19,12 +19,10 @@ exports.Snake = void 0;
 var Reptile_1 = require("../../AnimalsTypes/Reptile");
 var Snake = /** @class */ (function (_super) {
     __extends(Snake, _super);
-    function Snake(requiredSpaceSqFt, favouriteFood, isSick, id) {
-        var _this = this;
-        if ((requiredSpaceSqFt >= 2) && (favouriteFood == 'Meet'))
-            _this = _super.call(this, requiredSpaceSqFt, favouriteFood, isSick, id) || this;
-        else
-            throw new Error('requiredSpaceSqFt < 2 or/and favouriteFood is not Meet');
+    function Snake(id) {
+        var _this = _super.call(this, 2, 'Meet', id) || this;
+        _this.RequiredSpaceSqFt = 2;
+        _this.FavouriteFood = 'Meet';
         return _this;
     }
     Snake.prototype.IsFriendlyWith = function (animal) {

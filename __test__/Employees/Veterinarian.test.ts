@@ -15,7 +15,7 @@ describe('Veterinarian', () => {
 
     it('Should be able to Add Animal Experiences', () => {
         const veterinarian = new Veterinarian('Bob', 'Faat', 'Snake');
-        const bison = new Bison(1000, 'Grass', false, 1);
+        const bison = new Bison(1);
 
         veterinarian.AddAnimalExperiences(bison);
 
@@ -24,14 +24,16 @@ describe('Veterinarian', () => {
 
     it('Should be able to Has Animal Experiences', () => {
         const veterinarian = new Veterinarian('Bob', 'Faat', 'Snake');
-        const snake = new Snake(2, 'Meet', false, 1);
+        const snake = new Snake(1);
 
         expect(veterinarian.HasAnimalExperience(snake)).toBe(true);
     })
 
     it('Should be able to Heel Animal', () => {
         const veterinarian = new Veterinarian('Bob', 'Faat', 'Snake');
-        const snake = new Snake(2, 'Meet', true, 1);
+        const snake = new Snake(1);
+
+        snake.IsSick = true;
 
         expect(snake.IsSick).toBe(true);
         expect(veterinarian.HeelAnimal(snake)).toBe(true);
@@ -40,14 +42,16 @@ describe('Veterinarian', () => {
 
     it('Should not be able to Has Animal Experiences', () => {
         const veterinarian = new Veterinarian('Bob', 'Faat', 'Snake');
-        const bison = new Bison(1000, 'Grass', false, 1);
+        const bison = new Bison(1);
 
         expect(veterinarian.HasAnimalExperience(bison)).toBe(false);
     })
 
     it('Should not be able to Heel Animal', () => {
         const veterinarian = new Veterinarian('Bob', 'Faat', 'Snake');
-        const bison = new Bison(1000, 'Grass', true, 1);
+        const bison = new Bison(1);
+
+        bison.IsSick = true;
 
         expect(bison.IsSick).toBe(true);
         expect(veterinarian.HeelAnimal(bison)).toBe(false);

@@ -19,12 +19,10 @@ exports.Lion = void 0;
 var Mammal_1 = require("../../AnimalsTypes/Mammal");
 var Lion = /** @class */ (function (_super) {
     __extends(Lion, _super);
-    function Lion(requiredSpaceSqFt, favouriteFood, isSick, id) {
-        var _this = this;
-        if ((requiredSpaceSqFt >= 1000) && (favouriteFood == 'Meet'))
-            _this = _super.call(this, requiredSpaceSqFt, favouriteFood, isSick, id) || this;
-        else
-            throw new Error('requiredSpaceSqFt < 1000 or/and favouriteFood is not Meet');
+    function Lion(id) {
+        var _this = _super.call(this, 1000, 'Meet', id) || this;
+        _this.RequiredSpaceSqFt = 1000;
+        _this.FavouriteFood = 'Meet';
         return _this;
     }
     Lion.prototype.IsFriendlyWith = function (animal) {

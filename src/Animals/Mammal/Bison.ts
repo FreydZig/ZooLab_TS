@@ -5,11 +5,10 @@ import {Elephant} from "./Elephant";
 
 export class Bison extends Mammal{
 
-    constructor(requiredSpaceSqFt : number, favouriteFood : string, isSick: boolean, id: number) {
-        if((requiredSpaceSqFt >= 1000) && (favouriteFood == 'Grass'))
-        super(requiredSpaceSqFt, favouriteFood, isSick, id);
-        else
-            throw new Error('requiredSpaceSqFt < 1000 or/and favouriteFood is not Grass')
+    constructor(id: number) {
+        super(1000, 'Grass', id);
+        this.RequiredSpaceSqFt = 1000;
+        this.FavouriteFood = 'Grass';
     }
 
     IsFriendlyWith(animal: Animal) {

@@ -15,7 +15,7 @@ describe('Enclosure', () => {
 
     it('Should be able to Add Animal', () => {
         const enclosure = new Enclosure('Bison', new Zoo(''), 2000);
-        const bison = new Bison(1000, 'Grass', false, 1);
+        const bison = new Bison(1);
         enclosure.AddAnimal(bison);
         expect(enclosure.Animals[0].Id).toBe(1);
     })

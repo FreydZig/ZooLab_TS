@@ -3,12 +3,12 @@ exports.__esModule = true;
 exports.Animal = void 0;
 var FeedTime_1 = require("./FeedTime");
 var Animal = /** @class */ (function () {
-    function Animal(requiredSpaceSqFt, favouriteFood, isSick, id) {
+    function Animal(requiredSpaceSqFt, favouriteFood, id) {
         this.RequiredSpaceSqFt = requiredSpaceSqFt;
         this.FavouriteFood = favouriteFood;
         this.FeedTimes = new Array();
         this.FeedSchedule = new Array();
-        this.IsSick = isSick;
+        this.IsSick = false;
         this.Id = id;
     }
     Animal.prototype.Feed = function (zooKeeper) {
