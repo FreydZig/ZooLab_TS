@@ -5,6 +5,6 @@ import {Veterinarian} from "./ZooLab/Employee/Veterinarian";
 const zooC = new ZooConsole();
 zooC.Create()
 
-zooC.Hire();
+zooC.Mein();
 
 

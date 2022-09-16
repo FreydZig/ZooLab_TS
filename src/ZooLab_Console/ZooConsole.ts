@@ -11,11 +11,59 @@ import {Create} from "./Create";
 import {ZooApp} from "../ZooLab/ZooApp";
 import {Zoo} from "../ZooLab/Zoo";
 import * as readline from 'readline'
+import {FeedTime} from "../ZooLab/FeedTime";
 
 export class ZooConsole {
     zooApp: ZooApp = new ZooApp();
     zoo1: Zoo = new Zoo('Brookline');
     zoo2: Zoo = new Zoo('Chicago');
+
+    Mein(){
+        var rl = readline.createInterface({
+            input:process.stdin,
+            output:process.stdout
+        })
+
+        rl.question('You can: \n 1. Look sick animals \n 2. Look feed animals \n 3. Look employees \n 4. Heel animals \n 5. Feed animals \ 6. Hire employee \n e. Exit \n', (answer) =>{
+            switch (answer){
+                case '1':{
+                    rl.close();
+                    return this.IsSick();
+                }
+                case '2':{
+                    rl.close();
+                    return this.IsFeed();
+                }
+                case '3':{
+                    rl.close();
+                    return this.Employees();
+                }
+                case '4':{
+                    rl.close();
+                    return this.Heel();
+                }
+                case '5':{
+                    rl.close();
+                    return this.Feed();
+                }
+                case '6':{
+                    rl.close();
+                    return this.Hire();
+                }
+                case 'e':{
+                    rl.close();
+                    return 0;
+                }
+                default:{
+                    rl.close();
+                    console.log('Not available command! \n');
+                    return this.Mein();
+                }
+            }
+        })
+
+        return 0;
+    }
 
     Create(): void{
         this.zooApp.AddZoo(this.zoo1);
@@ -67,6 +115,7 @@ export class ZooConsole {
             })
             console.log();
         })
+        return this.Mein();
     }
 
     Heel(){
@@ -80,6 +129,21 @@ export class ZooConsole {
         this.zooApp._zoos.forEach(z =>{
             z.FeedAnimals(new Date());
         })
+        return this.IsFeed()
+    }
+
+    IsFeed(){
+        this.zooApp._zoos.forEach(z => {
+            z.Enclosures.forEach(e => {
+                e.Animals.forEach(a => {
+                    if(a.FeedTimes.length > 0)
+                        console.log(a.Id + ' was feed in ' + a.FeedTimes[a.FeedTimes.length-1].FeedTime)
+                    else
+                        console.log(a.Id + ' is hungry')
+                })
+            })
+        })
+        return this.Mein()
     }
 
     Employees(){
@@ -89,12 +153,10 @@ export class ZooConsole {
                     console.log(e.AnimalExperiences);
             })
         })
+        return this.Mein();
     }
 
     Hire(){
-
-
-
         var rl = readline.createInterface({
             input:process.stdin,
             output:process.stdout
@@ -132,8 +194,8 @@ export class ZooConsole {
                                 employee = new Veterinarian(firstName,lastName,animalExperiences)
 
                             this.zooApp._zoos[zooLoc].HireEmployee(employee);
-                            this.Employees();
                             rl.close();
+                            return this.Employees();
                         })
                         //rl.close();
                     })
@@ -143,6 +205,5 @@ export class ZooConsole {
             })
             //rl.close();
         })
-
     }
 }
